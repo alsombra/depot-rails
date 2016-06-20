@@ -1,68 +1,30 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * This is a manifest file that'll be compiled into application.css, which will
+ * include all the files listed below.
+ * 
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets,
+ * vendor/assets/stylesheets, or vendor/assets/stylesheets of plugins, if any,
+ * can be referenced here using a relative path.
+ * 
+ * You're free to add application-wide styles to this file and they'll appear
+ * at the top of the compiled file, but it's generally better to create a new
  * file per style scope.
- *
- *= require_tree .
+ * 
  *= require_self
+ *= require_tree .
  */
-.depot_form {
-  fieldset {
-    background: #b9d2b9;
 
-    legend {
-      color: #dfd;
-      background: #141;
-      font-family: sans-serif;
-      padding: 0.2em 1em;
-    }
+#banner {
+  background: #9c9;
+  padding: 10px;
+  border-bottom: 2px solid;
+  font: small-caps 40px/40px "Times New Roman", serif;
+  color: #282;
+  text-align: center;
+
+  img {
+    float: left;
   }
-  form {
-    label {
-      width: 5em;
-      float: left;
-      text-align: right;
-      padding-top: 0.2em;
-      margin-right: 0.1em;
-      display: block;
-    }
-    select, textarea, input {
-      margin-left: 0.5em;
-    }
-    .submit {
-      margin-left: 4em;
-    }
-    br{
-      display: none;
-    }
-  }
-}
-
-
-
-
-
- #banner {
-   background: #9c9;
-   padding: 20px;
-   border-bottom: 4px solid;
-   font: small-caps 30px "Times New Roman", serif;
-   color: #282;
-   text-align: center;
-
-    img {
-      float: left;
-      position: relative;
-      margin-left: 40px;
-      transform: scale(1.8);
-    }
 }
 
 #notice {
@@ -73,63 +35,97 @@
   background-color: #f0f0f0;
   font: bold smaller sans-serif;
 }
+
 #columns {
   background: #141;
 
   #main {
-    margin-left: 21em;
+    margin-left: 17em;
     padding: 1em;
-    background: white
+    background: white;
   }
 
+//
   #side {
-    float :left;
+    float: left;
     padding: 1em 2em;
-    width: 17em;
+    width: 13em;
     background: #141;
-    form, div{
+
+    form, div {
       display: inline;
-    }
+    }  
+ 
     input {
       font-size: small;
     }
-    #cart{
 
-      color: white;
+    #cart {
+      font-size: smaller;
+      color:     white;
 
-      table{
+      table {
         border-top:    1px dotted #595;
         border-bottom: 1px dotted #595;
         margin-bottom: 10px;
-        td#decrement_button {
-          form.button_to{
-            text-align: center;
-            display:table-cell;
-            margin: auto;
-
-            input[type="submit"]{
-              display: inline-block;
-              width: 4em !important;
-              height:2em;
-            }
-          }
-
-        }
       }
     }
-    ul{
-      padding: 0px;
-      li{
+
+    ul {
+      padding: 0;
+
+      li {
         list-style: none;
-        color: #bfb;
+
         a {
           color: #bfb;
           font-size: small;
         }
       }
-      .counter{
-        color:#fbf
-      }
     }
-   }
- }
+  }
+//
+}
+
+//
+.depot_form {
+  fieldset {
+    background: #efe;
+
+    legend {
+      color: #dfd;
+      background: #141;
+      font-family: sans-serif;
+      padding: 0.2em 1em;
+    }
+  }
+
+  form {
+    label {
+      width: 5em;
+      float: left;
+      text-align: right;
+      padding-top: 0.2em;
+      margin-right: 0.1em;
+      display: block;
+    }
+
+    select, textarea, input {
+      margin-left: 0.5em;
+    }
+
+    .submit {
+      margin-left: 4em;
+    }
+
+    br {
+      display: none
+    }
+  }
+}
+//
+
+.locale {
+  float: right;
+  margin: -0.25em 0.1em;
+}
